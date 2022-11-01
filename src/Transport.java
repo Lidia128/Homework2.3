@@ -1,13 +1,12 @@
-public class Transport {
+public abstract class Transport {
     private String brend;
     private String model;
     private final int productionYear;
     private final String productionCountry;
     private String color;
-    private int maxSpeed;
+    int maxSpeed;
 
-    public Transport(String brend, String model, int productionYear, String productionCountry, String color,
-                     int maxSpeed) {
+    public Transport(String brend, String model, int productionYear, String productionCountry) {
         if (brend == null) {
             this.brend = "default";
         }else {
@@ -49,5 +48,5 @@ public class Transport {
     public String getModel() {
         return model;
     }
-
+    public abstract void refill ();
 }

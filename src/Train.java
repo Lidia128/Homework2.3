@@ -8,8 +8,7 @@ public class Train extends Transport {
 
     public Train( String brend, String model, int productionYear, String productionCountry, int maxSpeed,
                   String nameStationDeparted, String endStation, double priceTrip,int vogon) {
-        super(brend, model, productionYear, productionCountry, maxSpeed, nameStationDeparted, endStation,
-                priceTrip, vogon);
+        super(brend, model, productionYear, productionCountry);
 
         this.priceTrip = priceTrip;
         this.nameStationDeparted = nameStationDeparted;
@@ -56,4 +55,8 @@ public class Train extends Transport {
         this.vogon = vogon;
     }
 
+    @Override
+    public void refill() {
+        System.out.println("Нужно заправлять дизелем.");
+    }
 }

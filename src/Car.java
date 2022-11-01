@@ -13,6 +13,7 @@ public class Car extends Transport{
     public Car (String brend, String model, double engineVolume, String color, int productionYear,
                String productionCountry, String gears, String typeOfBody, String regNumber,
                int seatsCount, boolean summerTyres, Key key, Insurance insurance) {
+        super(brend, model, productionYear, productionCountry);
 
         if (engineVolume == 0) {
             this.engineVolume = 1.5;
@@ -36,9 +37,8 @@ public class Car extends Transport{
     }
     public Car (String brend, String model, double engineVolume, String color, int productionYear,
                 String productionCountry, String typeOfBody, int seatsCount) {
-        super(brend, model, engineVolume, color, productionYear, productionCountry, "МКПП",
-                "седан", "x000xx000", 5, true, new Key(), new Insurance());
-            }
+        super(brend, model, productionYear, productionCountry);
+                  }
     public double getEngineVolume() {
         return engineVolume;}
     public void setEngineVolume(double engineVolume) {
@@ -47,9 +47,6 @@ public class Car extends Transport{
         return gears;}
     public String getRegNumber() {
         return regNumber;
-    }
-    public String getBrend() {
-        return getBrend();
     }
     public String getTypeOfBody () {
         return typeOfBody;
@@ -84,10 +81,7 @@ public class Car extends Transport{
             this.gears = gears;
         }
     }
-    public String getModel() {
-        return getModel();
-    }
-    public boolean isSummerTyres (){
+     public boolean isSummerTyres (){
         return summerTyres;
     }
     public void setSummerTyres(boolean summerTyres) {
@@ -107,6 +101,13 @@ public class Car extends Transport{
         return!Character.isDigit(chars[1]) && !Character.isDigit(chars[2]) && !Character.isDigit(chars[3]) &&
                 !Character.isDigit(chars[6]) && !Character.isDigit(chars[7]) && !Character.isDigit(chars[8]);
     }
+
+    @Override
+    public void refill() {
+        System.out.println("Можно заправлять бензином, дизелем на заправке или заряжать " +
+                "на специальных электропарковках, если это электрокар.");
+    }
+
     public static class Key {
         private final boolean remoteRunEngine;
         private final boolean withouKeyAccess;
