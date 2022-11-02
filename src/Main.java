@@ -30,6 +30,30 @@ public class Main {
         kia.refill();
         hyundai.refill();
 
+        Train lastochka = new Train("Ласточка", "B-901", 2011,
+                "Россия", 301, "Белорусского вокзала",
+                "Минск-Пассажирский", 3500, 11);
+
+        Train leningrad = new Train("Ленинград", "D-125", 2019,
+                "Россия", 270, "Ленинградского вокзала",
+                "Ленинград-Пассажирский", 1700, 8);
+
+        printInfoTrain(lastochka);
+        printInfoTrain(leningrad);
+        lastochka.refill();
+        leningrad.refill();
+
+        Bus mihaylovka = new Bus("Икарус", "2548", 1983, "Чехословакия");
+        Bus moskva = new Bus("Экобас", "Д-658", 2021, "Россия");
+        Bus kopeysk = new Bus("Волжанин", "24-75", 2019, "Россия");
+
+
+        printInfoBus(mihaylovka);
+        printInfoBus(moskva);
+        printInfoBus(kopeysk);
+        mihaylovka.refill();
+        moskva.refill();
+        kopeysk.refill();
     }
 
     private static void printInfo(Car car) {
@@ -39,20 +63,7 @@ public class Main {
                 ", регистрационный номер " + car.getRegNumber() + ", количество мест " + car.getSeatsCount()
                 + (car.isSummerTyres() ? ", шины " + "летняя" : "зимняя"));
     }
-    {
-    Train lastochka = new Train("Ласточка", "B-901", 2011,
-            "Россия", 301, "Белорусского вокзала",
-            "Минск-Пассажирский", 3500, 11);
 
-    Train leningrad = new Train("Ленинград", "D-125", 2019,
-            "Россия", 270, "Ленинградского вокзала",
-            "Ленинград-Пассажирский", 1700, 8);
-
-        printInfoTrain(lastochka);
-        printInfoTrain(leningrad);
-        lastochka.refill();
-        leningrad.refill();
-   }
 
     private static void printInfoTrain(Train train) {
         System.out.println("Поезд " + train.getBrend() + ", модель " + train.getModel() + ", " + train.getProductionYear()
@@ -62,20 +73,6 @@ public class Main {
                 train.getPriceTrip() + " рублей, в поезде " + train.getVogon() + " вагонов.");
     }
 
-    {
-        Bus mihaylovka = new Bus("Икарус", "2548", 1983, "Чехословакия");
-        Bus moskva = new Bus("Экобас", "Д-658", 2021, "Россия");
-        Bus kopeysk = new Bus("Волжанин", "24-75", 2019, "Россия");
-
-
-        printInfoBus(mihaylovka);
-        printInfoBus(moskva);
-        printInfoBus(kopeysk);
-
-        mihaylovka.refill();
-        moskva.refill();
-        kopeysk.refill();
-    }
 
     private static void printInfoBus(Bus bus) {
         System.out.println("Автобус " + bus.getBrend() + ", модель " + bus.getModel() + ", "
