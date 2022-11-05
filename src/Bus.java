@@ -1,7 +1,7 @@
-public class Bus extends Transport{
+public class Bus extends Transport {
 
-    public Bus (String brend, String model, int productionYear, String productionCountry){
-        super( brend, model,productionYear,productionCountry);
+    public Bus(String brend, String model, int productionYear, String productionCountry) {
+        super(brend, model, productionYear, productionCountry);
     }
 
     @Override

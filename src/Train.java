@@ -6,8 +6,8 @@ public class Train extends Transport {
     private String endStation;
     private int vogon;
 
-    public Train( String brend, String model, int productionYear, String productionCountry, int maxSpeed,
-                  String nameStationDeparted, String endStation, double priceTrip,int vogon) {
+    public Train(String brend, String model, int productionYear, String productionCountry, int maxSpeed,
+                 String nameStationDeparted, String endStation, double priceTrip, int vogon) {
         super(brend, model, productionYear, productionCountry);
 
         this.priceTrip = priceTrip;
@@ -15,6 +15,7 @@ public class Train extends Transport {
         this.endStation = endStation;
         this.vogon = vogon;
     }
+
     public double getPriceTrip() {
         return priceTrip;
     }

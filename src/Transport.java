@@ -9,34 +9,42 @@ public abstract class Transport {
     public Transport(String brend, String model, int productionYear, String productionCountry) {
         if (brend == null) {
             this.brend = "default";
-        }else {
-            this.brend = brend;}
+        } else {
+            this.brend = brend;
+        }
         if (model == null) {
             this.model = "default";
-        }else {
-            this.model = model;}
+        } else {
+            this.model = model;
+        }
         this.productionYear = productionYear;
         this.productionCountry = productionCountry;
         this.color = color;
         this.maxSpeed = maxSpeed;
     }
+
     public int getProductionYear() {
         return productionYear;
     }
+
     public String getProductionCountry() {
         return productionCountry;
     }
+
     public String getColor() {
         return color;
     }
+
     public void setColor(String color) {
-        if (color == null && color.isEmpty()){
+        if (color == null && color.isEmpty()) {
             this.color = color;
         }
-         }
+    }
+
     public int getMaxSpeed() {
         return maxSpeed;
     }
+
     public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
@@ -48,5 +56,6 @@ public abstract class Transport {
     public String getModel() {
         return model;
     }
-    public abstract void refill ();
+
+    public abstract void refill();
 }
